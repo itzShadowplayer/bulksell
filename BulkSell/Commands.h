@@ -4,7 +4,30 @@
 #include <stdio.h>
 #include "PressKey.h"
 
-void bestoffer() {
+int presser = 0;
+
+void compactgemstone() {
+	while (presser < 5) {
+		RandomLeftClick();
+		presser++;
+	}
+}
+
+// coal
+void saxcoal() {
+	Sleep(100);
+	PressKey('E');
+	MoveMouse(817, 547);
+	RightClick();
+	Sleep(500);
+	MoveMouse(851, 353);
+	LeftClick();
+	Sleep(100);
+	PressKey(VK_ESCAPE);
+	Sleep(500);
+}
+
+void offercoal() {
 	Sleep(100);
 	PressKey('T');
 	PressSlash();
@@ -40,44 +63,68 @@ void bestoffer() {
 	LeftClick();
 }
 
-void sax() {
+// sapphire
+void saxfs() {
+	Sleep(100);
+	PressKey('E');
+	MoveMouse(817, 547);
+	RightClick();
+	Sleep(500);
+	MoveMouse(1000, 520);
+	RightClick();
+	Sleep(500);
+	MoveMouse(960, 410);
+}
+
+void recipefs() {
+	Sleep(100);
+	PressKey('T');
+	PressSlash(); 
+	PressKey('R');
+	PressKey('E');
+	PressKey('C');
+	PressKey('I');
+	PressKey('P');
+	PressKey('E');
+	PressKey(' ');
+	PressKey('S');
+	PressKey('A');
+	PressKey('P');
+	PressKey('P');
+	PressKey('H');
+	PressKey('I');
+	PressKey('R');
+	PressKey('E');
+	PressKey(VK_RETURN);
+	Sleep(500);
+	MoveMouse(888, 392);
+	LeftClick();
+	Sleep(500);
+	MoveMouse(1000, 465);
+	while (presser < 25) {
+		RandomLeftClick();
+		presser++;
+	}
+	PressKey(VK_ESCAPE);
+}
+void offerfs() {
 	Sleep(100);
 	PressKey('T');
 	PressSlash();
+	PressKey('B');
+	PressKey('Z');
+	PressKey(' ');
 	PressKey('S');
 	PressKey('A');
-	PressKey('X');
+	PressKey('P');
+	PressKey('P');
+	PressKey('H');
+	PressKey('I');
+	PressKey('R');
+	PressKey('E');
 	PressKey(VK_RETURN);
 	Sleep(500);
-	MoveMouse(889, 393);
-	RightClick();
-	Sleep(500);
-	MoveMouse(851, 353);
-	LeftClick();
-	Sleep(100);
-	PressKey(VK_ESCAPE);
-	Sleep(500);
-
-}
-void quicksax() {
-	PressKey('T');
-	PressKey(VK_UP);
-	PressKey(VK_UP);
-	PressKey(VK_RETURN);
-	Sleep(500);
-	MoveMouse(889, 393);
-	RightClick();
-	Sleep(500);
-	MoveMouse(851, 353);
-	LeftClick();
-}
-void quickbestoffer() {
-	PressKey('T');
-	PressKey(VK_UP);
-	PressKey(VK_UP);
-	PressKey(VK_RETURN);
-	Sleep(500);
-	MoveMouse(889, 393);
+	MoveMouse(960, 400);
 	LeftClick();
 	Sleep(500);
 	MoveMouse(1070, 427);

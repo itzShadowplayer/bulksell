@@ -1,7 +1,15 @@
 #include <iostream>
 #include <Windows.h>
 #include <string>
+#include <random>
 #include <stdio.h>
+
+int RandomDelay(int min, int max) {
+	static std::random_device rd;
+	static std::mt19937 gen(rd());
+	std::uniform_int_distribution<> dist(min, max);
+	return dist(gen);
+}
 
 void PressKey(WORD key) {
 	INPUT input = { 0 };
@@ -57,6 +65,20 @@ void MoveMouse(int x, int y) {
 void LeftClick() {
 	INPUT inputs[2] = { 0 };
 	Sleep(50);
+	inputs[0].type = INPUT_MOUSE;
+	inputs[0].mi.dwFlags = MOUSEEVENTF_LEFTDOWN;
+
+	inputs[1].type = INPUT_MOUSE;
+	inputs[1].mi.dwFlags = MOUSEEVENTF_LEFTUP;
+
+	SendInput(2, inputs, sizeof(INPUT));
+}
+
+void RandomLeftClick() {
+	INPUT inputs[2] = { 0 };
+
+	Sleep(RandomDelay(50, 80)); // random delay between 30–80 ms
+
 	inputs[0].type = INPUT_MOUSE;
 	inputs[0].mi.dwFlags = MOUSEEVENTF_LEFTDOWN;
 

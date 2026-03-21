@@ -5,6 +5,8 @@
 #include <limits>
 #include "Sell.h"
 
+std::string compactor;
+std::string rank;
 
 int main() {
 	SetProcessDPIAware();
@@ -12,21 +14,39 @@ int main() {
 	std::string cookie;
 	std::getline(std::cin, cookie);
 	system("cls");
-	if (cookie == "yes") {
+	if (cookie == "Yes" || cookie == "yes") {
 		std::cout << "Coal, Flawless Sapphire" << std::endl;
 		std::string choose;
 		std::getline(std::cin, choose);
 		system("cls");
-		if (choose == "Coal") {
+		if (choose == "Coal" || choose == "coal") {
+			system("cls");
 			selloffercoal();
 		}
 
-		if (choose == "Flawless Sapphire") {
-			std::cout << "Flawless Sapphire in development" << std::endl;
-			std::cout << "This window will close in 5 seconds" << std::endl;
-			Sleep(5000);
-			return 0;
+		if (choose == "Flawless Sapphire" || choose == "flawless sapphire") {
+			std::cout << "Do your account have vip or higher" << std::endl;
+			std::getline(std::cin, rank);
+			system("cls");
+			if (rank == "Yes" || rank == "yes") {
+				sellofferfs();
+			}
 
+			else {
+				std::cout << "Do you have Flawless Sapphire in your compactor" << std::endl;
+				std::getline(std::cin, compactor);
+				system("cls");
+				if (compactor == "Yes" || compactor == "yes") {
+					compactsellofferfs();
+				}
+
+				else {
+					std::cout << "Put a Flawless Sapphire into your compactor" << std::endl;
+					std::cout << "This window will close in 5 seconds" << std::endl;
+					Sleep(5000);
+					return 0;
+				}
+			}
 		}
 
 		else {
