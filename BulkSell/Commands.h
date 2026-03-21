@@ -11,6 +11,7 @@ void compactgemstone() {
 		RandomLeftClick();
 		presser++;
 	}
+	PressKey(VK_ESCAPE);
 }
 
 // coal
