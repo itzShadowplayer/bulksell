@@ -1,7 +1,5 @@
-Have the sack of the item you want in the top left corner of you invtory and have gui sacle to 2 and make sure your on 1920x1080.
-
-be on your island of you are using /recipe to compact items. 
-
-If your using this for gemstones they need to be fine qualtiy if you dont have vip or higher rank for it to work. 
-
-Your inventory need to be clear except for the sack.
+1. Make sure your GUI scale in Video Settings is set to 2x and your monitor resolution is 1920x1080 & 16:9 Aspect ratio
+2. You must be VIP rank to use this script
+3. Be on your private island
+4. Your inventory must be empty other than the relevent sack
+5. Have the relevent sack in the top left corner on your inventory
