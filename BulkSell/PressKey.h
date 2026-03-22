@@ -74,6 +74,36 @@ void LeftClick() {
 	SendInput(2, inputs, sizeof(INPUT));
 }
 
+void ShiftLeftClick() {
+	INPUT input = { 0 };
+
+	// Shift down
+	input.type = INPUT_KEYBOARD;
+	input.ki.wVk = VK_SHIFT;
+	SendInput(1, &input, sizeof(INPUT));
+
+	Sleep(50);
+
+	// Mouse down
+	input.type = INPUT_MOUSE;
+	input.mi.dwFlags = MOUSEEVENTF_LEFTDOWN;
+	SendInput(1, &input, sizeof(INPUT));
+
+	Sleep(50);
+
+	// Mouse up
+	input.mi.dwFlags = MOUSEEVENTF_LEFTUP;
+	SendInput(1, &input, sizeof(INPUT));
+
+	Sleep(50);
+
+	// Shift up
+	input.type = INPUT_KEYBOARD;
+	input.ki.wVk = VK_SHIFT;
+	input.ki.dwFlags = KEYEVENTF_KEYUP;
+	SendInput(1, &input, sizeof(INPUT));
+}
+
 void RandomLeftClick() {
 	INPUT inputs[2] = { 0 };
 

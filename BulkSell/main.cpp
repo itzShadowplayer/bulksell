@@ -5,9 +5,6 @@
 #include <limits>
 #include "Sell.h"
 
-std::string compactor;
-std::string rank;
-
 int main() {
 	SetProcessDPIAware();
 	std::cout << "Do you have a booter cookie?" << std::endl;
@@ -15,37 +12,47 @@ int main() {
 	std::getline(std::cin, cookie);
 	system("cls");
 	if (cookie == "Yes" || cookie == "yes") {
-		std::cout << "Coal, Flawless Sapphire" << std::endl;
+		std::cout << "Coal, DiaCoal, Flawless Sapphire" << std::endl;
 		std::string choose;
 		std::getline(std::cin, choose);
 		system("cls");
 		if (choose == "Coal" || choose == "coal") {
 			system("cls");
 			selloffercoal();
+			return 0;
 		}
+		if (choose == "DiaCoal" || choose == "diacoal") {
+			std::cout << "Do you have VIP rank?" << std::endl;
+			std::string rank;
+			std::getline(std::cin, rank);
+			system("cls");
+			if (rank == "Yes" || rank == "yes") {
+				selldiacoal();
+				return 0;
+			}
+			else {
+				std::cout << "This script requires VIP rank" << std::endl;
+				std::cout << "This window will close in 5 seconds" << std::endl;
+				Sleep(5000);
+				return 0;
+			}
+		}	
 
 		if (choose == "Flawless Sapphire" || choose == "flawless sapphire") {
-			std::cout << "Do your account have vip or higher" << std::endl;
+			std::cout << "Do you have VIP rank?" << std::endl;
+			std::string rank;
 			std::getline(std::cin, rank);
 			system("cls");
 			if (rank == "Yes" || rank == "yes") {
 				sellofferfs();
+				return 0;
 			}
 
 			else {
-				std::cout << "Do you have Flawless Sapphire in your compactor" << std::endl;
-				std::getline(std::cin, compactor);
-				system("cls");
-				if (compactor == "Yes" || compactor == "yes") {
-					compactsellofferfs();
-				}
-
-				else {
-					std::cout << "Put a Flawless Sapphire into your compactor" << std::endl;
-					std::cout << "This window will close in 5 seconds" << std::endl;
-					Sleep(5000);
-					return 0;
-				}
+				std::cout << "This script requires VIP rank" << std::endl;
+				std::cout << "This window will close in 5 seconds" << std::endl;
+				Sleep(5000);
+				return 0;
 			}
 		}
 
