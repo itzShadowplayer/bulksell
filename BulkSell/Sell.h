@@ -31,7 +31,7 @@ void selloffercoal() {
 		count++;
 	}
 	system("cls");
-	std::cout << "done closing in 5 seconds" << std::endl;
+	std::cout << "Task Complete! Returning to main menu!" << std::endl;
 	Sleep(5000);
 }
 
@@ -58,7 +58,7 @@ void sellofferfs() {
 		count++;
 	}
 	system("cls");
-	std::cout << "done closing in 5 seconds" << std::endl;
+	std::cout << "Task Complete! Returning to main menu!" << std::endl;
 	Sleep(5000);
 }
 
@@ -93,6 +93,6 @@ void selldiacoal() {
 		system("cls");
 		count++;
 	}
-	std::cout << "done closing in 5 seconds" << std::endl;
+	std::cout << "Task Complete! Returning to main menu!" << std::endl;
 	Sleep(5000);
 }
