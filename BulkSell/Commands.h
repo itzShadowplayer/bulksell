@@ -161,7 +161,7 @@ void compactcoal() {
 	PressKey('L');
 	PressKey(VK_RETURN);
 	Sleep(500);
-	MoveMouse(850, 400);
+	MoveMouse(890, 400);
 	LeftClick();
 	Sleep(500);
 	MoveMouse(1000, 470);

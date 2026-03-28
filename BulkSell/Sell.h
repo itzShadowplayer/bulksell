@@ -16,6 +16,8 @@ void selloffercoal() {
 	std::cout << "You have 5 seconds to tab in to the game" << std::endl;
 	Sleep(5000);
 	system("cls");
+	std::cout << "Compacting coal" << std::endl;
+	compactcoal();
 	while (count < repeat) {
 		std::cout << count << std::endl;
 		std::cout << std::endl;
